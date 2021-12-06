@@ -1,4 +1,4 @@
-# Live demo: [Portfolio Site](https://www.stephentrieu.com/)
+# Live demo: [Portfolio Site](https://holespitter.github.io/nkh/)
 
 ### Description
 This website was created using ThreeJS and React, specifically react-three-fiber to render in the graphics on each react component.  
