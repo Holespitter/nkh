@@ -1,0 +1,181 @@
+@function rem($value) {
+    @return ($value / 16) * 1rem;
+  }
+
+@font-face {
+	font-family: space-grotesk;
+	src: url(../../assets/SpaceGrotesk.ttf)
+}
+
+@font-face {
+	font-family: futura;
+	src: url(../../assets/FuturaStdBook.ttf)
+}
+
+@font-face {
+	font-family: futura-thin;
+	src: url(../../assets/FuturaThin.ttf)
+}
+
+$space-blue: #668a93;
+
+@mixin underlineAfter {
+    content: '';
+    position: absolute;
+    width: 97.5%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+@mixin underlineHover {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+@mixin mediumText {
+    font-size: calc(10px + 1vw);
+}
+
+#intro-wrapper {
+    margin-top: 35vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-family: futura-thin;
+    #intro-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        #intro-h1 {
+            font-size: calc(30px + 4.5vw);
+            letter-spacing: 2vw;
+        }
+        #intro-p {
+            margin-top: 0.2vw;
+            font-size: calc(10px + 1.2vw);
+            letter-spacing: 8px;
+        }
+        #intro-button-container {
+            margin-top: 20vh;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            font-size: calc(10px + 1vw);
+            letter-spacing: 4px;
+            #intro-button-work {
+                display: inline-block;
+                position: relative;
+                margin-left: calc(40px + 6vw);
+                padding-bottom: 5px;
+                &:hover:after {
+                    @include underlineHover;
+                }
+                &:after {
+                    @include underlineAfter;
+                }
+            }
+            #intro-button-about {
+                display: inline-block;
+                position: relative;
+                &:hover:after {
+                    @include underlineHover;
+                }
+                &:after {
+                    @include underlineAfter;
+                }
+            }
+            
+        }
+    }
+}
+
+#about-wrapper {
+    margin-top: 20vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: futura-thin;
+    align-items: center;
+    #about-container {
+        padding-top: 20vh;
+        display: flex;
+      flex-direction: column;
+        justify-content: center;
+        #about-title {
+            font-size: calc(20px + 1.2vw);
+            letter-spacing: 3px;
+            padding-left: 6px;
+            padding-right: 6px;
+            width: fit-content;
+            height: 10px;
+        }
+        #about-p {
+            align-self: center;
+            font-family: arial;
+            font-size: calc(12px + 0.33vw);
+            letter-spacing: 0.8px;
+            word-spacing: 1px;
+            font-weight: 100;
+            margin-top: 7vh;
+            display: flex;
+            flex-direction: column;
+            width: 65vw;
+            max-width: 800px;
+            gap: 1.5vh;
+            line-height: 34px;
+        }
+        #about-tools-title {
+            @include mediumText;
+            // font-family: arial;
+            text-align: center;
+            margin-top: 26vh;
+            width: 100%;
+        }
+        #about-tools-container {
+            max-width: 800px;
+            margin-top: 3vh;
+            display: grid;
+            padding-left: 10px;
+            padding-right: 10px;
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: 1fr 1fr;
+            column-gap: 1px; //horizontal gap
+            row-gap: 30px; //vertical gap
+            justify-items: center;
+            align-items: center;
+        }
+    }
+}
+
+#socials {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 80px;
+    gap: 50px;
+    height: 70px;
+    :hover .social-logo {
+        opacity: 1;
+        transition: 0.55s;
+        transform: translate(0em, -0.2em)
+      }
+}
+
+#footer-wrapper {
+    color: rgba(202, 202, 202, 0.836);
+    margin-top: 500px;
+    margin-bottom: 50px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    small {
+        font-size: 14px;
+    }
+}

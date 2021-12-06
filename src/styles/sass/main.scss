@@ -1,0 +1,59 @@
+@function rem($value) {
+    @return ($value / 16) * 1rem;
+  }
+
+@font-face {
+	font-family: space-grotesk;
+	src: url(../../assets/SpaceGrotesk.ttf)
+}
+
+@font-face {
+	font-family: futura;
+	src: url(../../assets/FuturaStdBook.ttf)
+}
+
+@font-face {
+	font-family: futura-thin;
+	src: url(../../assets/FuturaThin.ttf)
+}
+  /* CSS Reset */
+*, *::before, *::after { 
+    margin: 0;
+    padding: 0;
+    // box-sizing: inherit;
+    box-sizing: border-box;
+  }
+
+  a {
+	  text-decoration: none;
+	  color: white;
+  }
+
+root {
+	position: fixed;
+	top: 0;
+	left: 0;
+	user-select: none;
+	scroll-behavior: smooth;
+}
+
+#canvas-container {
+	width: 100vw;
+	height: 100%;
+	background-color: black;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+
+#body {
+	position: relative;
+	height: 100%;
+	font-family: futura;
+	color: white;
+	z-index: 99;
+	user-select: none;
+	font-size: calc(10px + 0.75vw);
+	scroll-behavior: smooth;
+}
