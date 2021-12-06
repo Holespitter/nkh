@@ -91,10 +91,9 @@ const Home = () => {
 				<div id='about-container'>
 					<div id='about-title'></div>
 					<div id='about-p'>
-						<p>Welcome to my portfolio.</p>
+						<p>Welcome to the website.</p>
 						<p>
-							I am a web developer with a passion for designing
-							polished and beautiful applications. My focus is on creating unique experiences and products using React, Canvas, and Javascript.
+							Web development was at one time (Belive it or not) my Full-Time job. I do not dip into web development but when I do, My focus is on creating unique experiences and products using React, Canvas, and Javascript.
 							On top of the basic technologies, I also love to  experiment
 							in new areas such as 3D graphics using WebGL and ThreeJS.
 						</p>
